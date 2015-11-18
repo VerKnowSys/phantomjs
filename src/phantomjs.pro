@@ -1,13 +1,9 @@
 
-if(!equals(QT_MAJOR_VERSION, 5)|!equals(QT_MINOR_VERSION, 4)) {
-    error("This program can only be compiled with Qt 5.4.x.")
-}
-
 TEMPLATE = app
 TARGET = phantomjs
 QT += network webkitwidgets
 CONFIG += console
-
+LIBS += -lQt5PrintSupport
 DESTDIR = ../bin
 
 RESOURCES = phantomjs.qrc \
